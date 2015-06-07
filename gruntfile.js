@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     'wiredep',
     'configureProxies',
     'connect:livereload',
-    'concurrent:dev'
+    'watch'
   ]);
 
   grunt.registerTask('test', ['karma:test']);
@@ -25,7 +25,6 @@ module.exports = function (grunt) {
     'ngdocs',
     'clean:dist',
     'html2js',
-    'compass:dist',
     'copy:dist',
     'useminPrepare',
     'concat',

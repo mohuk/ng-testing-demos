@@ -4,8 +4,6 @@ module.exports = {
       logConcurrentOutput: true
     },
     tasks: [
-      'compass:app',
-      'watch'
     ]
   }
 };
