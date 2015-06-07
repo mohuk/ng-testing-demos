@@ -28,9 +28,9 @@
 
     function init(){
       users.loadAllUsers()
-        .then( function( res ){
-          vm.users    = [].concat(res.data);
-          vm.selected = res.data[0];
+        .then( function(users){
+          vm.users    = [].concat(users);
+          vm.selected = users[0];
         }, function(res){
           vm.errorStatus = res;
         });

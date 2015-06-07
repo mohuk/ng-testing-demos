@@ -10,7 +10,7 @@
    * prefixing it with an 'x' omits this block altogether
    */
 
-  fdescribe('Controller: Users', function(){
+  describe('Controller: Users', function(){
 
     /**
      * angular mocks decorates services to aid testing e.g.
@@ -102,14 +102,12 @@
       //promise resolution
       it('should set users on success', function(){
         //response of the service
-        var response = {
-          data: [
+        var response = [
             {
               name: 'Bruce Wayne',
               occupation: 'detective'
             }
-          ]
-        };
+          ];
 
         //resolving the promise with the response
         loadUsersDeferred.resolve(response);
@@ -119,8 +117,8 @@
         rootScope.$digest();
 
         //verifying the expectatons on success
-        expect(ctrl.users).toEqual(response.data);
-        expect(ctrl.selected).toEqual(response.data[0]);
+        expect(ctrl.users).toEqual(response);
+        expect(ctrl.selected).toEqual(response[0]);
       });
 
       //promise rejection

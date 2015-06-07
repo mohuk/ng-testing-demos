@@ -20,7 +20,7 @@
         // Simulate async nature of real remote calls
         return $http.get('./datastore/users.json')
           .then(function(res){
-            return res.data;
+            return $q.when(res.data);
           }, function(res){
             return $q.reject(res.status);
           });
