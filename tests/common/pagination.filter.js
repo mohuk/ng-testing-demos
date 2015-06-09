@@ -15,7 +15,9 @@
     var recordsPerPage;
 
     beforeEach(inject(function (paginationFilter){
-
+      //Filters can be injected by postfixing the name by Filter
+      //Filters are genearlly services returning a function
+      //the only difference is that they can be executed from markup unlike other services
       pagination = paginationFilter;
 
     }));
@@ -27,6 +29,8 @@
         recordsPerPage = 10;
       });
 
+      //all code paths which throw an exception are tested by wrapping the subject
+      //into another function, you cannot find this documented, so this qualifies as ProTip
       it('should throw error that list is empty', function(){
         expect(function(){
           pagination(list, currentPage, recordsPerPage);
