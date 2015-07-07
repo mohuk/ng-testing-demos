@@ -1,7 +1,7 @@
 # ng-testing-demos
 Demo app for 'Of Angular and Testing' talk
 
-Slide deck can be found [here](https://slides.com/mohammadumairkhan/of-angular-and-testing)
+Slide deck can be found [here](https://slides.com/mohuk/of-angular-and-testing)
 
 App is a fork of [Material Start project](https://github.com/angular/material-start)
 
